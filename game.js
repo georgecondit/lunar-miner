@@ -16,7 +16,7 @@ let producers = {
         
     },
     conveyor: {
-        output: 50,
+        output: 0,
         cost: 500,
         upgrade: 300,
         quantity: 0,
@@ -24,7 +24,7 @@ let producers = {
         
     },
     shuttle: {
-        output: 200,
+        output: 0,
         cost: 1000000,
         upgrade: 300000,
         quantity: 0,
@@ -79,6 +79,7 @@ function startGame() {
   }
 
   function quitGame() {
+    window.location.reload()
     document.getElementById('game-controls').classList.add('hidden')
     document.getElementById('quit-button').classList.add('hidden')
     document.getElementById('start-button').classList.remove('hidden')
