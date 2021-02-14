@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <title>Miner Game</title>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" href="game.css">
+</head>
+
+<body class="bg-image">
+  <header>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-lg-6 col-sm-12 bg-dark text-left ">
+          <button id="start-button" class="start-button" onclick="startGame()">START GAME</button>
+          <button id="quit-button" class="quit-button hidden" onclick="quitGame()">QUIT GAME</button>
+        </div>
+        <div class="col-lg-6 col-sm-12 bg-dark text-right">
+          <h1 class="text-color">LUNaR MINiNG CO.INC.LLC.DBA </h1>
+        </div>
+        <div class="col-12 bg-dark text-right">
+          <h class="text-color">"space === death, and vice versa" </h>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <div class="container-fluid">
+    <div id='game-controls' class='row hidden'>
+      <div class="col-lg-3 col-md-6 col-sm-12 text-color">
+        <h2>ORE: <span id='oreCount'></span></h2>
+        <h5>UPGRADE IN: <span id="newResourceCountdown"></span></h5>
+      </div>
+
+
+      <div class="col-lg-3 col-md-6 col-sm-12 text-color">
+        <h2>
+          RESOURCES
+        </h2>
+        <h4>Miners: <span id='minerQuant'></span></h4>
+        <h4>Conveyors: <span id='conveyorQuant'></span></h4>
+        <h4>Shuttle: <span id='shuttleQuant'></span></h4>
+        <h4>Politicians: <span id='politicianQuant'></span></h4>
+      </div>
+      <div class="col-lg-3 col-md-6 col-sm-12 text-color">
+        <h2>
+          PRODUCTION
+        </h2>
+        <h4>Miners: <span id='miner-output'></span></h4>
+        <h4>Conveyors: <span id='conveyor-output'></span></h4>
+        <h4>Shuttle: <span id='shuttle-output'></span></h4>
+        <h4>Politicians: <span id='politician-output'></span></h4>
+      </div>
+      <div class="col-lg-3 col-md-6 col-sm-12 text-right text-color">
+        <h2>CAP-EX</h2>
+        <p>
+        <h4>MINER: <span id='miner-cost'></span> </h4><button id="upgrade"
+          onclick="purchaseResources('miner')">buy</button>
+        <button id="upgrade" onclick="upgrade('miner')">upgrade</button>
+        </p>
+        <p>
+        <h4>CONVEYOR: <span id='conveyor-cost'></span></h4><button id="upgrade"
+          onclick="purchaseResources('conveyor')">buy</button>
+        <button id="upgrade" onclick="upgrade('conveyor')">upgrade</button>
+        </p>
+        <p>
+        <h4>HEAVY_LIFT SHUTTLE: <span id='shuttle-cost'></span></h4><button id="upgrade"
+          onclick="purchaseResources('shuttle')">buy</button>
+        <button id="upgrade" onclick="upgrade('shuttle')">upgrade</button>
+        </p>
+        <p>
+        <h4>POLITICIAN: <span id='politician-cost'></span></h4><button id="upgrade"
+          onclick="purchaseResources('politician')">buy</button>
+        <button id="upgrade" onclick="upgrade('politician')">upgrade</button>
+        </p>
+      </div>
+    </div>
+  </div>
+  <div>
+    <div>
+      <img id="mine-raw" src="moon.jpeg" width="800" height="800" onclick="getRawMat();" />
+    </div>
+  </div>
+  </main>
+  <footer>
+
+  </footer>
+
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"></script>
+  <script src="game.js"></script>
+</body>
+
+</html>
